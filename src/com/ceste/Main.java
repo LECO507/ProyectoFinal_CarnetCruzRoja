@@ -4,6 +4,7 @@ package com.ceste;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by leco2_000 on 28/4/2016.
@@ -65,8 +66,16 @@ public class Main {
         set.add(c5);
         set.add(c1);
 
-        for (Object cruzRoja : set){
-            System.out.println(cruzRoja);
+        Set<CarnetCruzRoja> ccr = new TreeSet<CarnetCruzRoja>();
+        ccr.add(c1);
+        ccr.add(c2);
+        ccr.add(c3);
+        ccr.add(c4);
+        ccr.add(c5);
+        ccr.add(c1);
+
+        for (CarnetCruzRoja cr : ccr){
+            System.out.println(cr.getNombre()+", "+cr.getApellido());
         }
 
     }

@@ -1,9 +1,11 @@
 package com.ceste;
 
+import java.util.TreeSet;
+
 /**
  * Created by leco2_000 on 27/4/2016.
  */
-public class CarnetCruzRoja{
+public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     private String nombre;
     private String apellido;
     private String dni;
@@ -12,9 +14,10 @@ public class CarnetCruzRoja{
     private String servicio;
     private String caducidad;
 
-    public CarnetCruzRoja(String dni){
+    public CarnetCruzRoja(String dni) {
         this.dni = dni;
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -67,9 +70,18 @@ public class CarnetCruzRoja{
         this.caducidad = caducidad;
     }
 
-    public String toString(){
-        return nombre+" "+apellido+" "+dni+"\n"+provincia+", "+localidad+"\n"+servicio+"\n"+caducidad;
+    public String toString() {
+        return nombre + " " + apellido + " " + dni + "\n" + provincia + ", " + localidad + "\n" + servicio + "\n" + caducidad;
+    }
+
+    @Override
+    public int compareTo(CarnetCruzRoja o) {
+        int lastCmp = nombre.compareTo(o.nombre);
+        return (lastCmp != 0 ? lastCmp : apellido.compareTo(o.apellido));
     }
 }
+
+
+
 
 
