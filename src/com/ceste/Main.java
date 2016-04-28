@@ -63,8 +63,11 @@ public class Main {
         set.add(c3);
         set.add(c4);
         set.add(c5);
+        set.add(c1);
 
-        System.out.println(set);
+        for (Object cruzRoja : set){
+            System.out.println(cruzRoja);
+        }
 
     }
 }

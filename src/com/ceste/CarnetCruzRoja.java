@@ -3,7 +3,7 @@ package com.ceste;
 /**
  * Created by leco2_000 on 27/4/2016.
  */
-public class CarnetCruzRoja {
+public class CarnetCruzRoja{
     private String nombre;
     private String apellido;
     private String dni;
