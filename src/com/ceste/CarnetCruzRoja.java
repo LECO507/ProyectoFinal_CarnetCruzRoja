@@ -66,7 +66,10 @@ public class CarnetCruzRoja {
     public void setCaducidad(String caducidad) {
         this.caducidad = caducidad;
     }
-    
+
+    public String toString(){
+        return nombre+" "+apellido+" "+dni+"\n"+provincia+", "+localidad+"\n"+servicio+"\n"+caducidad;
+    }
 }
 
 
