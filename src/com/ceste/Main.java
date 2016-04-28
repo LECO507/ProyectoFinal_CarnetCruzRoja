@@ -2,6 +2,8 @@ package com.ceste;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by leco2_000 on 28/4/2016.
@@ -16,7 +18,7 @@ public class Main {
         c1.setLocalidad("Zaragoza");
         c1.setServicio("Voluntario");
         c1.setCaducidad("18/07/18");
-        carnets.add(c1);
+
         CarnetCruzRoja c2 = new CarnetCruzRoja("");
         c2.setNombre("Mayorian");
         c2.setApellido("Caballero");
@@ -24,7 +26,7 @@ public class Main {
         c2.setLocalidad("Zaragoza");
         c2.setServicio("Voluntario");
         c2.setCaducidad("18/07/18");
-        carnets.add(c2);
+
         CarnetCruzRoja c3 = new CarnetCruzRoja("");
         c3.setNombre("Jorge");
         c3.setApellido("Garrido");
@@ -32,7 +34,7 @@ public class Main {
         c3.setLocalidad("Zaragoza");
         c3.setServicio("Voluntario");
         c3.setCaducidad("18/07/18");
-        carnets.add(c3);
+
         CarnetCruzRoja c4 = new CarnetCruzRoja("");
         c4.setNombre("Fitz");
         c4.setApellido("Gerald");
@@ -40,7 +42,7 @@ public class Main {
         c4.setLocalidad("Zaragoza");
         c4.setServicio("Voluntario");
         c4.setCaducidad("18/07/18");
-        carnets.add(c4);
+
         CarnetCruzRoja c5 = new CarnetCruzRoja("");
         c5.setNombre("Sheyra");
         c5.setApellido("Oro");
@@ -48,10 +50,21 @@ public class Main {
         c5.setLocalidad("Zaragoza");
         c5.setServicio("Voluntario");
         c5.setCaducidad("18/07/18");
-        carnets.add(c5);
 
         carnets.add(c1);
+        carnets.add(c2);
+        carnets.add(c3);
+        carnets.add(c4);
+        carnets.add(c5);
 
-        System.out.println(carnets);
+        Set set = new HashSet<>();
+        set.add(c1);
+        set.add(c2);
+        set.add(c3);
+        set.add(c4);
+        set.add(c5);
+
+        System.out.println(set);
+
     }
 }
