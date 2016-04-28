@@ -49,5 +49,9 @@ public class Main {
         c5.setServicio("Voluntario");
         c5.setCaducidad("18/07/18");
         carnets.add(c5);
+
+        carnets.add(c1);
+
+        System.out.println(carnets);
     }
 }

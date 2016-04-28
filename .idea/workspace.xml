@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d61c3c1e-4abf-44d0-8217-fc63e66a2697" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CruzRoja/com/ceste/Main.class" afterPath="$PROJECT_DIR$/out/production/CruzRoja/com/ceste/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ceste/Main.java" afterPath="$PROJECT_DIR$/src/com/ceste/Main.java" />
     </list>
     <ignored path="CruzRoja.iws" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="CarnetCruzRoja.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ceste/CarnetCruzRoja.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-44.703705">
-              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+            <state vertical-scroll-proportion="-8.814815">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding>
                 <element signature="e#333#334#0" expanded="true" />
                 <element signature="e#363#364#0" expanded="true" />
@@ -68,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ceste/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7253142">
-              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -547,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ceste/CarnetCruzRoja.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.703705">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state vertical-scroll-proportion="-8.814815">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
             <element signature="e#333#334#0" expanded="true" />
             <element signature="e#363#364#0" expanded="true" />
@@ -585,7 +586,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ceste/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7253142">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
           <folding />
         </state>
       </provider>
