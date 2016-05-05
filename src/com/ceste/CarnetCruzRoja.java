@@ -1,5 +1,7 @@
 package com.ceste;
 
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -26,9 +28,7 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
         return apellido;
     }
 
-    public String getDni() {
-        return caducidad;
-    }
+    public String getDni() { return dni; }
 
     public String getProvincia() {
         return provincia;
@@ -76,8 +76,9 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
 
     @Override
     public int compareTo(CarnetCruzRoja o) {
-        int lastCmp = nombre.compareTo(o.nombre);
-        return (lastCmp != 0 ? lastCmp : apellido.compareTo(o.apellido));
+        int ape = nombre.compareTo(o.nombre);
+        return (ape != 0 ? ape : apellido.compareTo(o.apellido));
+
     }
 }
 
