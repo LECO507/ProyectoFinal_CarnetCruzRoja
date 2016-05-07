@@ -10,7 +10,7 @@ import java.util.TreeSet;
 public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     private String nombre;
     private String apellido;
-    private String dni;
+    String dni;
     private String provincia;
     private String localidad;
     private String servicio;
@@ -28,7 +28,9 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
         return apellido;
     }
 
-    public String getDni() { return dni; }
+    public String getDni() {
+        return dni;
+    }
 
     public String getProvincia() {
         return provincia;
@@ -71,15 +73,22 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     }
 
     public String toString() {
-        return nombre + " " + apellido + " " + dni + "\n" + provincia + ", " + localidad + "\n" + servicio + "\n" + caducidad;
+        return nombre + "\t" + apellido + "\t" + dni + "\t" + provincia + "\t" + localidad + "\t" + servicio + "\t" + caducidad;
     }
 
     @Override
     public int compareTo(CarnetCruzRoja o) {
-        int ape = nombre.compareTo(o.nombre);
-        return (ape != 0 ? ape : apellido.compareTo(o.apellido));
-
+        int ape = apellido.compareTo(o.apellido);
+        return (ape != 0 ? ape : nombre.compareTo(o.nombre));
     }
+
+    public Comparator<CarnetCruzRoja> cruzRojaComparator = new Comparator<CarnetCruzRoja>() {
+        @Override
+        public int compare(CarnetCruzRoja o1, CarnetCruzRoja o2) {
+            return (o1).dni.compareTo((o2).dni);
+        }
+    };
+
 }
 
 
