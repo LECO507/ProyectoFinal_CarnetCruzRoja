@@ -1,8 +1,6 @@
 package com.ceste;
 
 
-import java.awt.*;
-import java.io.IOException;
 import java.util.*;
 import java.util.Iterator;
 
@@ -22,7 +20,7 @@ public class Main{
         c1.setProvincia("Zaragoza");
         c1.setLocalidad("Zaragoza");
         c1.setServicio("Voluntario");
-        c1.setCaducidad("18/07/18");
+        c1.setCaducidad("18/03/18");
 
         CarnetCruzRoja c2 = new CarnetCruzRoja("M2C");
         c2.setNombre("Mayorian");
@@ -30,7 +28,7 @@ public class Main{
         c2.setProvincia("Zaragoza");
         c2.setLocalidad("Zaragoza");
         c2.setServicio("Voluntario");
-        c2.setCaducidad("18/07/18");
+        c2.setCaducidad("15/09/19");
 
         CarnetCruzRoja c3 = new CarnetCruzRoja("J3G");
         c3.setNombre("Jorge");
@@ -38,7 +36,7 @@ public class Main{
         c3.setProvincia("Zaragoza");
         c3.setLocalidad("Zaragoza");
         c3.setServicio("Voluntario");
-        c3.setCaducidad("18/07/18");
+        c3.setCaducidad("14/08/20");
 
         CarnetCruzRoja c4 = new CarnetCruzRoja("F4G");
         c4.setNombre("Fitz");
@@ -46,7 +44,7 @@ public class Main{
         c4.setProvincia("Zaragoza");
         c4.setLocalidad("Zaragoza");
         c4.setServicio("Voluntario");
-        c4.setCaducidad("18/07/18");
+        c4.setCaducidad("19/06/21");
 
         CarnetCruzRoja c5 = new CarnetCruzRoja("S5O");
         c5.setNombre("Sheyra");
@@ -54,7 +52,7 @@ public class Main{
         c5.setProvincia("Zaragoza");
         c5.setLocalidad("Zaragoza");
         c5.setServicio("Voluntario");
-        c5.setCaducidad("18/07/18");
+        c5.setCaducidad("13/07/22");
         /**
          * Introducimos los objetos carnets a la ArrayList
          */
@@ -88,18 +86,31 @@ public class Main{
             CarnetCruzRoja comparable = iter.next();
         }
 
-        Comparator c = new CruzRojaComparator();
+        Comparator dniComparator = new CruzRojaDniComparator();
 
-        TreeSet<CarnetCruzRoja> cruzRojaComparator = new TreeSet<CarnetCruzRoja>(c);
-        cruzRojaComparator.add(c1);
-        cruzRojaComparator.add(c2);
-        cruzRojaComparator.add(c3);
-        cruzRojaComparator.add(c4);
-        cruzRojaComparator.add(c5);
+        TreeSet<CarnetCruzRoja> cruzRojaDniComparator = new TreeSet<CarnetCruzRoja>(dniComparator);
+        cruzRojaDniComparator.add(c1);
+        cruzRojaDniComparator.add(c2);
+        cruzRojaDniComparator.add(c3);
+        cruzRojaDniComparator.add(c4);
+        cruzRojaDniComparator.add(c5);
 
-        for (Iterator<CarnetCruzRoja> iter = cruzRojaComparator.iterator(); iter.hasNext(); ) {
-            CarnetCruzRoja comparator = iter.next();
-            System.out.println(comparator);
+        for (Iterator<CarnetCruzRoja> iter = cruzRojaDniComparator.iterator(); iter.hasNext(); ) {
+            CarnetCruzRoja comparatorDni = iter.next();
+        }
+
+        Comparator fechaComparator = new CruzRojaFechaComparator();
+
+        TreeSet<CarnetCruzRoja> cruzRojaFechaComparator = new TreeSet<CarnetCruzRoja>(fechaComparator);
+        cruzRojaFechaComparator.add(c1);
+        cruzRojaFechaComparator.add(c2);
+        cruzRojaFechaComparator.add(c3);
+        cruzRojaFechaComparator.add(c4);
+        cruzRojaFechaComparator.add(c5);
+
+        for (Iterator<CarnetCruzRoja> iter = cruzRojaFechaComparator.iterator(); iter.hasNext(); ) {
+            CarnetCruzRoja comparatorFecha = iter.next();
+            System.out.println(comparatorFecha);
         }
     }
 }

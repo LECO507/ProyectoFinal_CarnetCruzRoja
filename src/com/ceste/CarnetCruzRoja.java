@@ -10,7 +10,7 @@ import java.util.TreeSet;
 public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     private String nombre;
     private String apellido;
-    String dni;
+    private String dni;
     private String provincia;
     private String localidad;
     private String servicio;
@@ -81,13 +81,6 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
         int ape = apellido.compareTo(o.apellido);
         return (ape != 0 ? ape : nombre.compareTo(o.nombre));
     }
-
-    public Comparator<CarnetCruzRoja> cruzRojaComparator = new Comparator<CarnetCruzRoja>() {
-        @Override
-        public int compare(CarnetCruzRoja o1, CarnetCruzRoja o2) {
-            return (o1).dni.compareTo((o2).dni);
-        }
-    };
 
 }
 
