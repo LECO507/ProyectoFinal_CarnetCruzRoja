@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d61c3c1e-4abf-44d0-8217-fc63e66a2697" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ceste/ExportarCarnets2CVS.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CruzRoja/com/ceste/CarnetCruzRoja.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CruzRoja/com/ceste/ExportaCarnets2CVS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CruzRoja/com/ceste/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/ceste/ExportaCarnets2CVS.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ceste/CarnetCruzRoja.java" afterPath="$PROJECT_DIR$/src/com/ceste/CarnetCruzRoja.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ceste/Main.java" afterPath="$PROJECT_DIR$/src/com/ceste/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ceste/ExportarCarnets2CVS.java" afterPath="$PROJECT_DIR$/src/com/ceste/ExportarCarnets2CVS.java" />
     </list>
     <ignored path="CruzRoja.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +39,8 @@
       <file leaf-file-name="ExportarCarnets2CVS.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ceste/ExportarCarnets2CVS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23287672">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.29109588">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -798,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ceste/ExportarCarnets2CVS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23287672">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.29109588">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
