@@ -1,13 +1,12 @@
 package com.ceste;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by leco2_000 on 27/4/2016.
  */
-public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
+public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
     private String nombre;
     private String apellido;
     private String dni;
@@ -15,6 +14,9 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     private String localidad;
     private String servicio;
     private String caducidad;
+
+
+
 
     public CarnetCruzRoja(String dni) {
         this.dni = dni;
