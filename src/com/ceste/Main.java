@@ -123,14 +123,18 @@ public class Main{
             System.out.println(comparatorFecha);
         }*/
 
-        //ExportarCarnets2CVS exportarCarnets2CVS = new ExportarCarnets2CVS(carnets, "C:\\Users\\leco2_000\\Desktop\\CESTE\\2año\\Programacion\\CruzRoja\\FicheroCarnets.csv");
+        ExportarCarnets2CVS exportarCarnets2CVS = new ExportarCarnets2CVS(carnets, "C:\\Users\\leco2_000\\Desktop\\CESTE\\2año\\Programacion\\CruzRoja\\FicheroCarnets.csv");
         //exportarCarnets2CVS.guardarDatos();
         CarnetCruzRojaDb carnetsDb = new CarnetCruzRojaDb(carnets, "C:\\Users\\leco2_000\\Desktop\\CESTE\\2año\\Programacion\\CruzRoja\\FicheroCarnets.ser");
         //carnetsDb.guardar();
-        try {
-            carnetsDb.cargar();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        //try {
+            //carnetsDb.cargar();
+            CarnetCruzRoja c6 = new CarnetCruzRoja();
+            carnetsDb.addCarnet(c6);
+
+        //} catch (ClassNotFoundException e) {
+           // e.printStackTrace();
+        //}
+
     }
 }

@@ -65,10 +65,29 @@ public class CarnetCruzRojaDb {
     }
 
     public void addCarnet (CarnetCruzRoja carnet){
+        Scanner lee = new Scanner(System.in);
         System.out.println("Nombre: ");
-        Scanner nom = new Scanner(System.in);
-        String lee = nom.next();
-        carnet.setNombre(lee);
-
+        String nom = lee.nextLine();
+        carnet.setNombre(nom);
+        System.out.println("Apellido: ");
+        String ape = lee.nextLine();
+        carnet.setApellido(ape);
+        System.out.println("Dni: ");
+        String dni = lee.nextLine();
+        carnet.setDni(dni);
+        System.out.println("Provincia: ");
+        String pro = lee.nextLine();
+        carnet.setProvincia(pro);
+        System.out.println("Localidad: ");
+        String loc = lee.nextLine();
+        carnet.setLocalidad(loc);
+        System.out.println("Servicio: ");
+        String ser = lee.nextLine();
+        carnet.setServicio(ser);
+        System.out.println("Caducidad: ");
+        String cad = lee.nextLine();
+        carnet.setCaducidad(cad);
+        carnets.add(carnet);
     }
+    
 }
