@@ -1,5 +1,6 @@
 package com.ceste;
 
+import java.text.ParseException;
 import java.util.Comparator;
 
 /**
@@ -8,6 +9,12 @@ import java.util.Comparator;
 public class CruzRojaFechaComparator implements Comparator<CarnetCruzRoja> {
     @Override
     public int compare(CarnetCruzRoja o1, CarnetCruzRoja o2) {
-        return (o1).getCaducidad().compareTo((o2).getCaducidad());
+
+        try {
+            return (o1).getCaducidad().compareTo((o2).getCaducidad());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

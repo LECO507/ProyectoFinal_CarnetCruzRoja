@@ -1,12 +1,14 @@
 package com.ceste;
 
+import java.io.Serializable;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by leco2_000 on 27/4/2016.
  */
-public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
+public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>, Serializable {
     private String nombre;
     private String apellido;
     private String dni;
@@ -15,12 +17,11 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
     private String servicio;
     private String caducidad;
 
+    public CarnetCruzRoja() {
 
-
-
-    public CarnetCruzRoja(String dni) {
-        this.dni = dni;
     }
+
+    public String getDNI(){ return dni; }
 
     public String getNombre() {
         return nombre;
@@ -46,8 +47,15 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
         return servicio;
     }
 
-    public String getCaducidad() {
-        return caducidad;
+
+    public Date getCaducidad() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date fecha = sdf.parse(caducidad);
+        return fecha;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public void setNombre(String nombre) {
@@ -70,7 +78,7 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
         this.servicio = servicio;
     }
 
-    public void setCaducidad(String caducidad) {
+    public void setCaducidad(String caducidad){
         this.caducidad = caducidad;
     }
 
@@ -83,6 +91,7 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja> {
         int ape = apellido.compareTo(o.apellido);
         return (ape != 0 ? ape : nombre.compareTo(o.nombre));
     }
+
 
 }
 
