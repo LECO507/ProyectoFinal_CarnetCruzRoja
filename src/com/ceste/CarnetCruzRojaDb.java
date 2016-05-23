@@ -9,85 +9,101 @@ import java.util.Scanner;
  * Created by leco2_000 on 17/5/2016.
  */
 public class CarnetCruzRojaDb {
-    private ArrayList<CarnetCruzRoja> carnets; // Colección de carnets
-    private String fichero; // nombre de fichero donde se guardan los carnets
+    /**
+     * LLAMAMOS A LA COLECCION DE CARNETS
+     * EN fichero COLOCAMOS LA RUTA DONDE SE CREARA NUESTRO FICHERO .ser
+     * CREAMOS LAS VARIABLES GLOBALES
+     */
+    private final ArrayList<CarnetCruzRoja> carnets;
+    private String fichero = "C:\\Users\\leco2_000\\Desktop\\CESTE\\2año\\Programacion\\ProyectoFinal\\CarnetCruzRoja.ser";
+    File file = new File(fichero);
+    FileOutputStream fos;
+    ObjectOutputStream oos;
+    FileInputStream fis;
+    ObjectInputStream ois;
 
-    public CarnetCruzRojaDb(ArrayList carnets, String fichero) {
+    /**
+     * @param carnets
+     * COLOCAMOS EN carnets LOS ELEMNTOS QUE SE PASEN POR PARAMETRO
+     */
+
+    public CarnetCruzRojaDb(ArrayList<CarnetCruzRoja> carnets) {
         this.carnets = carnets;
-        this.fichero = fichero;
     }
-    /**
-     * Abre el fichero en modo lectura y carga sus datos en la variable carnets
-     * Debes usar flujos de objetos (ObjectInputStream)
-     */
-    public void cargar() throws ClassNotFoundException {
-        try {
 
-            FileInputStream fis = new FileInputStream(fichero);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            CarnetCruzRoja leido = null;
-            while ((leido=(CarnetCruzRoja)ois.readObject())!=null)
+
+    /**
+     * LEEMOS EL FICHERO .ser
+     */
+    public void mostrarSer(){
+        try {
+            fis = new FileInputStream(file);
+            ois = new ObjectInputStream(fis);
+            CarnetCruzRoja linea = null;
+            while ((linea = (CarnetCruzRoja) ois.readObject()) != null) {
+                System.out.println(linea);
+            }
+            ois.close();
+
+        } catch (FileNotFoundException e1) {
+            System.out.println("Error: El fichero no existe. ");
+        } catch (EOFException e) {
+
+        } catch (IOException e1) {
+            System.out.println("Error: Fallo en la lectura del fichero. ");
+        } catch (ClassNotFoundException e) {
+            System.out.println("No se pudo acceder a la clase adecuada para revertir la Serializacion al leer del fichero.");
+        }
+    }
+
+
+    /**
+     * ESTE METODO RECORRE EL ArrayList Y ESCRIBE EN EL FICHERO  .csv
+     */
+    public void escribirArrayList(){
+        try {
+            fos = new FileOutputStream(file);
+            oos = new ObjectOutputStream(fos);
+            for (int x = 0 ; x < carnets.size(); x++)
             {
-                System.out.println(leido);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        catch (EOFException e) {
-
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        // Completa
-    }
-    /**
-     * Abre el fichero en modo escritura y vuelca en el contenido del atributo carnets
-     * Debes usar flujos de objetos (ObjectOutputStream)
-     */
-    public void guardar() {
-        try {
-            FileOutputStream fos = new FileOutputStream(fichero);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            for (int x = 0 ; x < carnets.size() ; x++) {
                 oos.writeObject(carnets.get(x));
+                oos.flush();
             }
+
+            oos.close();
+
+
+        } catch (IOException e) {
+            System.out.println("Error: Fallo en la escritura del fichero. ");
+        }
+    }
+
+
+    /**
+     * ESTE METODO FUNCIONABA, QUE CUANDO INTRODUCIAS UN ELEMENTO AL FICHERO .csv SE AGREGARA SOLO ESE ELEMNTO
+     * PERO TENIA UN PEQUEÑO PROBLEMA AL LEERLO
+     */
+
+
+    public void escribir(CarnetCruzRoja carnetCruzRoja){
+        try {
+            fos = new FileOutputStream(file, true);
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(carnetCruzRoja);
             oos.flush();
             oos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error: Fallo en la escritura del fichero. ");
         }
-
-        // Completa
     }
 
-    public void addCarnet (CarnetCruzRoja carnet){
-        Scanner lee = new Scanner(System.in);
-        System.out.println("Nombre: ");
-        String nom = lee.nextLine();
-        carnet.setNombre(nom);
-        System.out.println("Apellido: ");
-        String ape = lee.nextLine();
-        carnet.setApellido(ape);
-        System.out.println("Dni: ");
-        String dni = lee.nextLine();
-        carnet.setDni(dni);
-        System.out.println("Provincia: ");
-        String pro = lee.nextLine();
-        carnet.setProvincia(pro);
-        System.out.println("Localidad: ");
-        String loc = lee.nextLine();
-        carnet.setLocalidad(loc);
-        System.out.println("Servicio: ");
-        String ser = lee.nextLine();
-        carnet.setServicio(ser);
-        System.out.println("Caducidad: ");
-        String cad = lee.nextLine();
-        carnet.setCaducidad(cad);
-        carnets.add(carnet);
+    public CarnetCruzRoja get(int indice){
+        return carnets.get(indice);
     }
-    
+
 }
+
+
+
+
